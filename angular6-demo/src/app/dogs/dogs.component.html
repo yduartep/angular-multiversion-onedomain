@@ -1,0 +1,13 @@
+<div class="content">
+  <h1>Dogs</h1>
+  <h3>BREEDS LIST</h3>
+  <p *ngIf="loading">Loading ... <img src="../assets/images/spinner.gif"/></p>
+  <ul>
+    <li *ngFor="let cat of categories$ | async">
+      {{cat.name}} <a id="preview-{{cat.id}}" href="javascript:void(0)" (click)="showPreview(cat.name)">Preview</a>
+      <div *ngIf="selected === cat.name">
+        <img src="{{preview$ | async}}" alt="Dog Preview" width="200px" height="200px"/>
+      </div>
+    </li>
+  </ul>
+</div>

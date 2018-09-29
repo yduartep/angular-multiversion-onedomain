@@ -1,0 +1,12 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h1 class="main">Angular Demo Dogs & Cats</h1>
+<ul class="menu">
+  <li *ngFor="let menu of items" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+    <a routerLink="{{menu.action}}" class="text-center">
+      <span>{{menu.title}}</span>
+    </a>
+  </li>
+</ul>
+<app-version></app-version>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
