@@ -1,0 +1,7 @@
+version: '3'
+services:
+  angularjs_demo:
+    build: .
+    ports:
+      - 8000:8000
+    container_name: angularjs_demo

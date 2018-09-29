@@ -1,0 +1,12 @@
+<h1>Dogs</h1>
+<h3>BREEDS LIST</h3>
+<p ng-if="loading">Loading ... <img src="/assets/images/spinner.gif" /> </p>
+<ul ng-if="dogTypes">
+    <li ng-repeat="breed in dogTypes">
+        {{breed}} <a id="preview-{{breed}}" href="javascript:void(0)" ng-click="showPreview(breed)">Preview</a>
+        <div ng-if="selectedBreed == breed">
+            <img src="{{preview}}" alt="Dog Preview" width="200px" height="200px" />
+        </div>
+    </li>
+</ul>
+
