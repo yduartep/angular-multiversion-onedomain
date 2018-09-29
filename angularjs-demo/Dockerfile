@@ -12,6 +12,7 @@ WORKDIR /usr/src/app/v1
 
 # Install dependecies
 RUN npm install
+RUN bower install
 
 # Expose the port the app runs in
 EXPOSE 8000
