@@ -1,0 +1,19 @@
+{
+  "name": "angular-multiversion-onedomain",
+  "version": "1.0.0",
+  "description": "This project explain how to deploy multiple angular apps of different versions on different servers responding to the same domain",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "angularjs",
+    "nginx",
+    "docker",
+    "docker-compose",
+    "proxy-reverse"
+  ],
+  "author": "Yahima Duarte",
+  "license": "ISC"
+}

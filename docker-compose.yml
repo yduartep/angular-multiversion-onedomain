@@ -1,0 +1,22 @@
+version: '3.2'
+services:
+  frontend_v1:
+    build:
+      context: ./angularjs-demo
+    volumes:
+      - ./angularjs-demo/app:/usr/src/app/v1/app/
+    ports:
+      - 8000:8000
+    networks:
+      - development
+
+  frontend_v2:
+    build: ./angular6-demo
+    volumes:
+      - ./angular6-demo/src/app:/usr/src/app/v2/src/app/
+    ports:
+      - 4200:4200
+    networks:
+      - development
+networks:
+  development:
