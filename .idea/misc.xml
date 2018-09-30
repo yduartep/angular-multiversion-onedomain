@@ -3,5 +3,4 @@
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
   </component>
-  <component name="TsLintConfiguration" use-custom-config-file="true" custom-config-file-path="$PROJECT_DIR$/../frontend/iristrace/www2/tslint.json" />
 </project>

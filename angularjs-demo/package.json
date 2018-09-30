@@ -1,9 +1,9 @@
 {
-  "name": "angular-seed",
+  "name": "angularjs-demo",
   "private": true,
   "version": "0.1.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "description": "AngularJs Demo Dogs & Cats",
+  "repository": "https://github.com/yduartep/angular-multiversion-onedomain/tree/master/angularjs-demo",
   "license": "MIT",
   "devDependencies": {
     "bower": "^1.7.7",
@@ -20,10 +20,7 @@
     "protractor": "^5.4.1"
   },
   "scripts": {
-    "postinstall": "bower install",
     "update-deps": "npm update",
-    "postupdate-deps": "bower update",
-    "prestart": "npm install",
     "start": "http-server -a 0.0.0.0 -p 8000 -c-1 ./app",
     "pretest": "npm install",
     "test": "karma start karma.conf.js",

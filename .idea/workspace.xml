@@ -1,7 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec022342-215c-4e0c-a55a-41576d844eb9" name="Default Changelist" comment="" />
+    <list default="true" id="ec022342-215c-4e0c-a55a-41576d844eb9" name="Default Changelist" comment="create project">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/tslint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular6-demo/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular-loader/.bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular-loader/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular-loader/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular-loader/angular-loader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular-loader/angular-loader.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular-loader/angular-loader.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular-loader/bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular-loader/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular-mocks/.bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular-mocks/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular-mocks/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular-mocks/angular-mocks.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular-mocks/bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular-mocks/ngAnimateMock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular-mocks/ngMock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular-mocks/ngMockE2E.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular-mocks/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular-route/.bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular-route/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular-route/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular-route/angular-route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular-route/angular-route.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular-route/angular-route.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular-route/bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular-route/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular-route/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular/.bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular/angular-csp.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular/angular.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular/angular.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular/angular.min.js.gzip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular/angular.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular/bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/angular/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/.bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/.jscsrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/.jshintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/apple-touch-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/browserconfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/crossdomain.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/css/normalize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/doc/TOC.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/doc/css.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/doc/extend.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/doc/faq.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/doc/html.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/doc/js.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/doc/misc.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/doc/usage.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/humans.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/img/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/js/plugins.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/js/vendor/jquery-1.12.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/tile-wide.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/dist/tile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/gulpfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/src/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/src/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/src/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/src/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/src/apple-touch-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/src/browserconfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/src/crossdomain.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/src/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/src/doc/TOC.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/src/doc/css.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/src/doc/extend.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/src/doc/faq.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/src/doc/html.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/src/doc/js.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/src/doc/misc.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/src/doc/usage.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/src/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/src/humans.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/src/img/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/src/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/src/js/plugins.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/src/js/vendor/modernizr-2.8.3.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/src/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/src/tile-wide.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/src/tile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/test/file_content.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/test/file_existence.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular6-demo/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/angular6-demo/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angularjs-demo/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/angularjs-demo/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angularjs-demo/app/index-async.html" beforeDir="false" afterPath="$PROJECT_DIR$/angularjs-demo/app/index-async.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angularjs-demo/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/angularjs-demo/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angularjs-demo/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/angularjs-demo/bower.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angularjs-demo/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/angularjs-demo/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angularjs-demo/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/angularjs-demo/package.json" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -17,26 +139,98 @@
         <counts>
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.13" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="gitignore" value="2" />
+          <entry key="Dockerfile" value="4" />
+          <entry key="bowerrc" value="4" />
+          <entry key="dockerignore" value="2" />
+          <entry key="gitignore" value="5" />
+          <entry key="html" value="4" />
+          <entry key="js" value="5" />
+          <entry key="json" value="8" />
+          <entry key="yml" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Dockerfile" value="4" />
+          <entry key="HTML" value="4" />
+          <entry key="JSON" value="12" />
+          <entry key="JavaScript" value="5" />
+          <entry key="PLAIN_TEXT" value="7" />
+          <entry key="YAML" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="Dockerfile" value="234" />
+          <entry key="dockerignore" value="12" />
+          <entry key="html" value="46" />
+          <entry key="json" value="24" />
+          <entry key="txt" value="14" />
+          <entry key="yml" value="55" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Dockerfile" value="234" />
+          <entry key="HTML" value="46" />
+          <entry key="JSON" value="24" />
+          <entry key="PLAIN_TEXT" value="26" />
+          <entry key="YAML" value="55" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>angular/</find>
+      <find>angular-seed</find>
+      <find>bower_components</find>
+      <find>idea</find>
+      <find>ign</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>lib</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/angularjs-demo</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/angularjs-demo/bower.json" />
+        <option value="$PROJECT_DIR$/angularjs-demo/package-lock.json" />
+        <option value="$PROJECT_DIR$/angularjs-demo/.dockerignore" />
+        <option value="$PROJECT_DIR$/angularjs-demo/app/index.html" />
+        <option value="$PROJECT_DIR$/angularjs-demo/app/index-async.html" />
+        <option value="$PROJECT_DIR$/angularjs-demo/package.json" />
+        <option value="$PROJECT_DIR$/angularjs-demo/Dockerfile" />
+        <option value="$PROJECT_DIR$/angular6-demo/Dockerfile" />
+        <option value="$PROJECT_DIR$/docker-compose.yml" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
@@ -55,11 +249,16 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/angular6-demo/package.json" />
+      <path value="$PROJECT_DIR$/angularjs-demo/app/lib/angular-loader/package.json" />
+      <path value="$PROJECT_DIR$/angularjs-demo/app/lib/angular-mocks/package.json" />
+      <path value="$PROJECT_DIR$/angularjs-demo/app/lib/angular-route/package.json" />
+      <path value="$PROJECT_DIR$/angularjs-demo/app/lib/angular/package.json" />
+      <path value="$PROJECT_DIR$/angularjs-demo/app/lib/html5-boilerplate/package.json" />
       <path value="$PROJECT_DIR$/angularjs-demo/package.json" />
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="33" />
     <option name="y" value="23" />
     <option name="width" value="1405" />
@@ -112,11 +311,6 @@
               <item name="angular-multiversion-onedomain" type="b2602c69:ProjectViewProjectNode" />
               <item name="angular-multiversion-onedomain" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="angular-multiversion-onedomain" type="b2602c69:ProjectViewProjectNode" />
-              <item name="angular-multiversion-onedomain" type="462c0819:PsiDirectoryNode" />
-              <item name="angularjs-demo" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -127,6 +321,7 @@
   <component name="PropertiesComponent">
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -135,7 +330,15 @@
     <property name="node.js.selected.package.tslint" value="$PROJECT_DIR$/../frontend/iristrace/www2/node_modules/tslint" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/angular6-demo" />
+      <recent name="$PROJECT_DIR$/angularjs-demo" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -160,26 +363,31 @@
       <option name="presentableId" value="Default" />
       <updated>1538235495654</updated>
       <workItem from="1538235498299" duration="346000" />
+      <workItem from="1538236317841" duration="6722000" />
     </task>
+    <task id="LOCAL-00001" summary="create project">
+      <created>1538236413267</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1538236413267</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="346000" />
+    <option name="totallyTimeSpent" value="7068000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="33" y="23" width="1405" height="767" extended-state="1" />
+    <frame x="33" y="23" width="1405" height="767" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project Explorer" />
-      <window_info id="Job Explorer" />
-      <window_info id="npm" side_tool="true" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24944974" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25311813" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Console" />
-      <window_info anchor="bottom" id="Docker" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Project Explorer" order="3" />
+      <window_info id="Job Explorer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -187,10 +395,15 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="FAQ Robot" />
+      <window_info anchor="bottom" id="Console" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="FAQ Robot" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,12 +412,119 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="create project" />
+    <option name="LAST_COMMIT_MESSAGE" value="create project" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/angular6-demo/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/angularjs-demo/app/bower_components/angular-route/angular-route.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angularjs-demo/app/bower_components/angular/angular.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angularjs-demo/app/bower_components/html5-boilerplate/dist/js/main.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angularjs-demo/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-381">
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/angularjs-demo/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angularjs-demo/.dockerignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="20" lean-forward="true" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angularjs-demo/.bowerrc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angularjs-demo/app/index-async.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angularjs-demo/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="64" column="35" lean-forward="true" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angularjs-demo/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+          <folding>
+            <element signature="n#!!block;n#devDependencies#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angularjs-demo/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angularjs-demo/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angularjs-demo/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="17" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular6-demo/.dockerignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular6-demo/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="32" selection-start-column="29" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
