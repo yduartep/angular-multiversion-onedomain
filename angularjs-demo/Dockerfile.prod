@@ -1,0 +1,29 @@
+############## Stage 1 - "build-stage-angularjs", based on Node.js, to build and compile the angularjs project ##############
+
+# Create image based on the official Node image from dockerhub
+FROM node:8.9.4 as build-stage-angularjs
+
+# Create a directory where our app will be placed
+RUN mkdir -p /usr/src/app/v1
+
+# Install dependencies just if the file package.json is changed
+COPY package.json Gruntfile.js /usr/src/app/v1/
+
+# Change to the directory where the app is deployed
+WORKDIR /usr/src/app/v1
+
+# Install dependecies
+RUN npm i npm@latest -g
+RUN npm install -g grunt-cli
+RUN npm install --silent
+
+# Copy all the code needed to run the app
+COPY app /usr/src/app/v1/app
+
+# run grunt to minify js and css files
+RUN grunt
+
+############## Stage 2 - based on Nginx, to have only the compiled app, ready for production with Nginx ##############
+FROM nginx:1.15
+
+COPY --from=build-stage-angularjs /usr/src/app/v1/dist/ /usr/share/nginx/html

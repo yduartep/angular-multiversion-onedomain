@@ -1,0 +1,35 @@
+version: "3.3"
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    ports:
+      - 80:80
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    networks:
+      - nginx-proxy
+
+  angularjs-nginx:
+    build:
+      context: ./angularjs-demo
+      dockerfile: Dockerfile.prod
+    ports:
+      - 81:80
+    environment:
+      - VIRTUAL_HOST=angularjs.local
+    networks:
+      - nginx-proxy
+
+  angular6-nginx:
+    build:
+      context: ./angular6-demo
+      dockerfile: Dockerfile.prod
+    ports:
+      - 82:80
+    environment:
+      - VIRTUAL_HOST=angular6.local
+    networks:
+      - nginx-proxy
+
+networks:
+  nginx-proxy:

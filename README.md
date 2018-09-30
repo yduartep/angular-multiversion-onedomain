@@ -21,7 +21,7 @@ Both apps will be reloaded if you change any of the source files.
 
 ## Start Prod server on Nginx
 
-Run `docker-compose -f prod.yml` to deploy both apps in nginx server.
+Run `docker-compose -f docker-compose.prod.yml up --build` to deploy both apps in nginx server.
 The source code of the `angularjs_demo` app will be minified (css & js files) before to be deployed.
 The source code of the `angular6_demo` app will be compiled for prod environment before to be deployed.
 
