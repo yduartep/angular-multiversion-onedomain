@@ -20,6 +20,8 @@
     "protractor": "^5.4.1"
   },
   "scripts": {
+    "bower-install": "bower install",
+    "bower-update": "bower update",
     "update-deps": "npm update",
     "start": "http-server -a 0.0.0.0 -p 8000 -c-1 ./app",
     "pretest": "npm install",
