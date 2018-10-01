@@ -7,8 +7,7 @@ var App = angular.module('myApp', [
     'myApp.cats',
     'myApp.version'
 ]).config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
-    // $locationProvider.hashPrefix('!');
-    $locationProvider.html5Mode(false);
+    $locationProvider.html5Mode(true);
     $locationProvider.hashPrefix('');
     $routeProvider.otherwise({redirectTo: '/dogs'});
 }]);
