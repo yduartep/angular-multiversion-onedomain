@@ -27,3 +27,5 @@ RUN grunt
 FROM nginx:1.15
 
 COPY --from=build-stage-angularjs /usr/src/app/v1/dist/ /usr/share/nginx/html
+
+EXPOSE 81

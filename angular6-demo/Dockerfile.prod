@@ -25,3 +25,5 @@ RUN npm run build:prod
 FROM nginx:1.15
 
 COPY --from=build-stage-angular6 /usr/src/app/v2/dist/angular6-demo /usr/share/nginx/html
+
+EXPOSE 82
