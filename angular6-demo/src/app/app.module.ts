@@ -15,6 +15,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {DogsService} from './dogs/dogs.service';
 import {DogsComponent} from './dogs/dogs.component';
 import {RouteGuard} from './route.guard';
+import { HelpComponent } from './help/help.component';
 
 @NgModule({
     declarations: [
@@ -23,7 +24,8 @@ import {RouteGuard} from './route.guard';
         CatsComponent,
         DogsComponent,
         FooterComponent,
-        VersionComponent
+        VersionComponent,
+        HelpComponent
     ],
     imports: [
         BrowserModule,

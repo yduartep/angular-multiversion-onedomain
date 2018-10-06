@@ -2,13 +2,6 @@
 
 angular.module('myApp.dogs', ['ngRoute'])
 
-    .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/dogs', {
-            templateUrl: 'dogs/dogs.html',
-            controller: 'DogsCtrl'
-        });
-    }])
-
     .controller('DogsCtrl', function ($scope, DogsService) {
         var self = this;
         $scope.dogTypes = [];

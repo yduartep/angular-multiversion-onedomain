@@ -50,8 +50,9 @@
 <body>
 <h1 class="main">Angular Demo Dogs & Cats</h1>
 <ul class="menu">
-    <li><a href="/dogs">Dogs</a></li>
+    <li><a ui-sref="dogs">Dogs</a></li>
     <li><a href="javascript:void(0)" onclick="window.location.href = window.location.origin + '/cats'; return;">Cats</a></li>
+    <li><a ui-sref="help">Help</a></li>
 </ul>
 <div class="version">
     <p>App version: <strong>{{ '%VERSION%' | interpolate }}</strong></p>
@@ -62,8 +63,8 @@
     your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<div class="content" ng-view></div>
-
+<!--<div class="content" ng-view></div>-->
+<div class="content" ui-view></div>
 <div class="footer">Angular demo: v<span app-version></span></div>
 
 <!-- In production use:
@@ -71,9 +72,11 @@
 -->
 <script src="lib/angular/angular.js"></script>
 <script src="lib/angular-route/angular-route.js"></script>
+<script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
 <script src="app.js"></script>
 <script src="dogs/dogs.js"></script>
 <script src="dogs/dogs.service.js"></script>
+<script src="help/help.js"></script>
 <!--<script src="cats/cats.js"></script>-->
 <!--<script src="cats/cats.service.js"></script>-->
 <script src="components/version/version.js"></script>

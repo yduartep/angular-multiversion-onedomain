@@ -22,5 +22,9 @@ export class RouteGuard implements CanActivate {
             const newUrl = `${window.location.origin}`;
             location.href = newUrl;
         }
+        if (route === '/help') {
+            const newUrl = `${window.location.origin}/${route}`;
+            location.href = newUrl;
+        }
     }
 }
