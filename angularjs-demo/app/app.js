@@ -4,10 +4,12 @@
 var App = angular.module('myApp', [
     'ngRoute',
     'myApp.dogs',
-    'myApp.cats',
     'myApp.version'
 ]).config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
-    $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode({
+        enabled: true,
+        rewriteLinks: false
+    });
     $locationProvider.hashPrefix('');
     $routeProvider.otherwise({redirectTo: '/dogs'});
 }]);

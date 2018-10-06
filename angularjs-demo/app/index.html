@@ -51,7 +51,7 @@
 <h1 class="main">Angular Demo Dogs & Cats</h1>
 <ul class="menu">
     <li><a href="/dogs">Dogs</a></li>
-    <li><a href="/cats">Cats</a></li>
+    <li><a href="javascript:void(0)" onclick="window.location.href = window.location.origin + '/cats'; return;">Cats</a></li>
 </ul>
 <div class="version">
     <p>App version: <strong>{{ '%VERSION%' | interpolate }}</strong></p>
@@ -73,9 +73,9 @@
 <script src="lib/angular-route/angular-route.js"></script>
 <script src="app.js"></script>
 <script src="dogs/dogs.js"></script>
-<script src="cats/cats.js"></script>
 <script src="dogs/dogs.service.js"></script>
-<script src="cats/cats.service.js"></script>
+<!--<script src="cats/cats.js"></script>-->
+<!--<script src="cats/cats.service.js"></script>-->
 <script src="components/version/version.js"></script>
 <script src="components/version/version-directive.js"></script>
 <script src="components/version/interpolate-filter.js"></script>

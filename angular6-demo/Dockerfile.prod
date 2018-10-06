@@ -16,7 +16,7 @@ RUN npm install --silent
 
 # Copy the rest of the code needed to run the app
 COPY src /usr/src/app/v2/src
-COPY angular.json tsconfig.json tslint.json /usr/src/app/v2/
+COPY nginx angular.json tsconfig.json tslint.json /usr/src/app/v2/
 
 # run build:prod task to minify js and css files
 RUN npm run build:prod
@@ -25,5 +25,6 @@ RUN npm run build:prod
 FROM nginx:1.15
 
 COPY --from=build-stage-angular6 /usr/src/app/v2/dist/angular6-demo /usr/share/nginx/html
+COPY --from=build-stage-angular6 /usr/src/app/v2/nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 82

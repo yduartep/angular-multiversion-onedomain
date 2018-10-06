@@ -1,0 +1,9 @@
+version: '3'
+services:
+  angular6_demo:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    ports:
+      - 82:80
+    container_name: angular6_demo
