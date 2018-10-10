@@ -1,10 +1,18 @@
 # Angular multi-version single domain
 
-This project demostrates how to deploy multiple angular apps developed on different versions using the same domain as a unique app.
+This project demonstrates how to deploy multiple angular apps on different `Docker` containers using the same domain.
+The apps are developed on different angular versions and every uri you type, will redirect to the specific server through `Nginx HTTP Proxying`.
 
 The project is composed of two apps: `angularjs_demo` developed in angular version 1.6 and `angular6_demo` developed on angular version 6.
-This project is usefull in the case you have an AngularJs application and you want to migrate it progressively into angular 6.
+
+This project is usefull in the case you want to convert monolithic AngularJS apps to modules progressively without to stop the current development of new functionality or bug fixing.
 Every new module migrated to angular 6 will replace the old one developed in angularjs.
+
+In the `angular6_demo` app, there is a Route `guard` that redirect to `angularjs` app those requests not implemented yet, avoiding the router manage the uri internally.
+
+In the `angularjs_demo` app, when you click in a menu belong to a module already migrated to angular 6, the page will be redirected to the angular 6 page.
+
+![Demo](https://github.com/yduartep/angular-multiversion-onedomain/blob/master/demo-multi-version.gif)
 
 ## Download the project
 First of all download the source code. Clone the Github repository executing the command:
@@ -27,5 +35,6 @@ Run `docker-compose -f docker-compose.prod.yml up --build` to deploy both apps i
 The source code of the `angularjs_demo` app will be minified (css & js files) before to be deployed.
 The source code of the `angular6_demo` app will be compiled for prod environment before to be deployed.
 
-Navigate to `http://localhost/` to access the angular app developed in angular version 1.5.
-All the dogs requests will be served on the angularjs server and all the cats requests will be served in the angular6 server using `nginx proxy-reverse`.
+Navigating to `http://localhost/` the `angularjs_demo` app will be served by default.
+The `/dogs` and `/help` requests will be served on the `angularjs_demo` app and the `/cats` requests will be served on the `angular6_demo` app.
+These redirections are achieved using `Nginx HTTP Proxying`.
