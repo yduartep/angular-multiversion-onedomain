@@ -1,10 +1,12 @@
 {
   "name": "angular-multiversion-onedomain",
-  "version": "1.0.0",
-  "description": "This project explain how to deploy multiple angular apps of different versions on different servers responding to the same domain",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "This project demonstrates how to deploy multiple angular apps on different Docker containers using the same domain. The apps are developed on different angular versions and every uri you type, will redirect to the specific server through Nginx HTTP Proxying.",
+  "repository": {
+    "url": "https://github.com/yduartep/angular-multiversion-onedomain"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+
   },
   "keywords": [
     "angular",
@@ -12,8 +14,10 @@
     "nginx",
     "docker",
     "docker-compose",
-    "proxy-reverse"
+    "proxy-reverse",
+    "http",
+    "proxying"
   ],
-  "author": "Yahima Duarte",
+  "author": "Yahima Duarte <layahi@gmail.com>",
   "license": "ISC"
 }

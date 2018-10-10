@@ -5,6 +5,16 @@
   "description": "AngularJs Demo Dogs & Cats",
   "repository": "https://github.com/yduartep/angular-multiversion-onedomain/tree/master/angularjs-demo",
   "license": "MIT",
+  "keywords": [
+    "angularjs",
+    "nginx",
+    "docker",
+    "docker-compose",
+    "proxy-reverse",
+    "http",
+    "proxying",
+    "deploy"
+  ],
   "devDependencies": {
     "bower": "^1.7.7",
     "grunt": "^1.0.3",

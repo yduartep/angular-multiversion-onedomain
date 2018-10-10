@@ -42,7 +42,7 @@ angular.module('myApp.dogs', ['ngRoute'])
         $scope.showPreview = function (breed) {
             $scope.selectedBreed = breed;
             self.fetchByBreed(breed);
-        }
+        };
 
         self.fetchAllDogs();
     });
