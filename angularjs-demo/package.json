@@ -13,7 +13,9 @@
     "proxy-reverse",
     "http",
     "proxying",
-    "deploy"
+    "deploy nginx",
+    "superstatic",
+    "html5mode"
   ],
   "devDependencies": {
     "bower": "^1.7.7",
@@ -32,13 +34,14 @@
     "karma-jasmine-html-reporter": "^1.3.1",
     "karma-junit-reporter": "^2.0.0",
     "karma-spec-reporter": "0.0.32",
-    "protractor": "^5.4.1"
+    "protractor": "^5.4.1",
+    "superstatic": "^6.0.3"
   },
   "scripts": {
     "bower-install": "bower install",
     "bower-update": "bower update",
     "update-deps": "npm update",
-    "start": "http-server -a 0.0.0.0 -p 8000 -c-1 ./app",
+    "start": "superstatic -c superstatic.json --port 8000 --host 0.0.0.0",
     "pretest": "npm install",
     "test": "karma start karma.conf.js",
     "test-single-run": "karma start karma.conf.js --single-run",
@@ -46,6 +49,6 @@
     "update-webdriver": "webdriver-manager update",
     "pree2e": "npm run update-webdriver",
     "e2e": "protractor e2e-tests/protractor.conf.js",
-    "update-index-async": "node -e \"var fs=require('fs'),indexFile='app/index-async.html',loaderFile='app/bower_components/angular-loader/angular-loader.min.js',loaderText=fs.readFileSync(loaderFile,'utf-8').split(/sourceMappingURL=angular-loader.min.js.map/).join('sourceMappingURL=bower_components/angular-loader/angular-loader.min.js.map'),indexText=fs.readFileSync(indexFile,'utf-8').split(/\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/).join('//@@NG_LOADER_START@@\\n'+loaderText+'    //@@NG_LOADER_END@@');fs.writeFileSync(indexFile,indexText);\""
+    "update-index-async": "node -e \"var fs=require('fs'),indexFile='app/index-async.html',loaderFile='app/lib/angular-loader/angular-loader.min.js',loaderText=fs.readFileSync(loaderFile,'utf-8').split(/sourceMappingURL=angular-loader.min.js.map/).join('sourceMappingURL=lib/angular-loader/angular-loader.min.js.map'),indexText=fs.readFileSync(indexFile,'utf-8').split(/\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/).join('//@@NG_LOADER_START@@\\n'+loaderText+'    //@@NG_LOADER_END@@');fs.writeFileSync(indexFile,indexText);\""
   }
 }
