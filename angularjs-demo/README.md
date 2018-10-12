@@ -1,41 +1,38 @@
 # `Angularjs - Demo`
 
-This project is an application skeleton for a typical [AngularJS][angularjs] web app. You can use it
-to quickly bootstrap your angular webapp projects and dev environment for these projects.
+This project is a typical [AngularJS][angularjs] demo web app used to demostrate how to deploy multiple angular apps in separated docker containers that answer under the same domain.
 
-The seed contains a sample AngularJS application and is preconfigured to install the Angular
-framework and a bunch of development and testing tools for instant web development gratification.
+The app contain a menu with 3 requests: `Dogs` and `Help` are served through `UI-Router`. The `Cats` request instead, is served from other server.
+So, everytime you click in that menu on dev environment, the application will redirect to the default page `Dogs`.
+In a production environment, the application is deployed in an `Nginx` server and everytime you click the `Cats` menu, the app will redirect to the other server.
 
-The seed app doesn't do much, just shows how to wire two controllers and views together.
+The app use the `html5Mode` to make easier the requests redirection.
+On `dev` environment the application is started with the `superstatic` file server to allow the refresh of every request and avoid the common 404 error.
+On `production` environment the static files are minified with `grunt` and deployed on `Nginx` server with `Docker`.
 
+Every module migrated to `angular6` or other framework, should be disabled from this project to avoid errors during request redirections. For that reason, in the definition of the `angularjs` module, `myApp.cats` is not present anymore.
 
 ## Getting Started
 
-To get you started you can simply clone the `angular-seed` repository and install the dependencies:
+To get you started you can simply clone the main repository and install the dependencies:
 
 ### Prerequisites
 
-You need git to clone the `angular-seed` repository. You can get git from [here][git].
+- You need git to clone the repository. You can get git from [here][git].
 
-We also use a number of Node.js tools to initialize and test `angular-seed`. You must have Node.js
+- I also use a number of Node.js tools to initialize and test the project. You must have Node.js
 and its package manager (npm) installed. You can get them from [here][node].
 
-### Clone `angular-seed`
+- You also will need Docker to start the application.
 
-Clone the `angular-seed` repository using git:
+### Clone `angular-multiversion-onedomain`
 
-```
-git clone https://github.com/angular/angular-seed.git
-cd angular-seed
-```
-
-If you just want to start a new project without the `angular-seed` commit history then you can do:
+Clone the `angular-multiversion-onedomain` repository using git and move to `angularjs-demo`:
 
 ```
-git clone --depth=1 https://github.com/angular/angular-seed.git <your-project-name>
+git clone https://github.com/yduartep/angular-multiversion-onedomain.git
+cd angular-multiversion-onedomain/angularjs-demo
 ```
-
-The `depth=1` tells git to only pull down one commit worth of historical data.
 
 ### Install Dependencies
 
@@ -48,33 +45,40 @@ us manage and test the application.
   [Java Development Kit (JDK)][jdk] installed on your machine. Check out the section on
   [end-to-end testing](#e2e-testing) for more info.
 
-We have preconfigured `npm` to automatically run `bower` so we can simply do:
+
+The project use `bower` to download the angular dependencies but I have renamed the folder to lib and use bower just when I need to update the dependencies.
+
+To install the project execute the command:
 
 ```
 npm install
 ```
 
-Behind the scenes this will also call `bower install`. After that, you should find out that you have
-two new folders in your project.
+To add and update dependencies, modify the file `bower.json` and execute the command:
 
-* `node_modules` - contains the npm packages for the tools we need
-* `app/bower_components` - contains the Angular framework files
+```
+npm run bower-install
+```
 
-*Note that the `bower_components` folder would normally be installed in the root folder but
-`angular-seed` changes this location through the `.bowerrc` file. Putting it in the `app` folder
-makes it easier to serve the files by a web server.*
+Then, rename the folder generated `app/bower_components` to `lib`.
 
-### Run the Application
+### Development server
 
-We have preconfigured the project with a simple development web server. The simplest way to start
-this server is:
+I have preconfigured the project with a simple development web server named `superstatic`.
+This file server allow the refresh of every request and avoid the common 404 error when we use the `html5mode`.
+The simplest way to start this server is:
 
 ```
 npm start
 ```
 
-Now browse to the app at [`localhost:8000/index.html`][local-app-url].
+Now browse to the app at [`localhost:8000`][local-app-url].
 
+If you want to start the application with `Docker`, execute the command:
+
+```
+docker-compose up --build
+```
 
 ## Directory Layout
 
@@ -89,14 +93,14 @@ app/                    --> all of the source files for the application
       version-directive_test.js  --> version directive tests
       interpolate-filter.js      --> custom interpolation filter
       interpolate-filter_test.js --> interpolate filter tests
-  view1/                --> the view1 view template and logic
-    view1.html            --> the partial template
-    view1.js              --> the controller logic
-    view1_test.js         --> tests of the controller
-  view2/                --> the view2 view template and logic
-    view2.html            --> the partial template
-    view2.js              --> the controller logic
-    view2_test.js         --> tests of the controller
+  dogs/                --> the dogs view template and logic
+    dogs.html            --> the partial template
+    dogs.js              --> the controller logic
+    dogs_test.js         --> tests of the controller
+  help/                --> the help view template and logic
+    help.html            --> the partial template
+    help.js              --> the controller logic
+    help_test.js         --> tests of the controller
   app.js                --> main application module
   index.html            --> app layout file (the main html template file of the app)
   index-async.html      --> just like index.html, but loads js files asynchronously
@@ -109,16 +113,16 @@ e2e-tests/            --> end-to-end tests
 
 ## Testing
 
-There are two kinds of tests in the `angular-seed` application: Unit tests and end-to-end tests.
+There are two kinds of tests in the `angularjs-demo` application: Unit tests and end-to-end tests.
 
 ### Running Unit Tests
 
-The `angular-seed` app comes preconfigured with unit tests. These are written in [Jasmine][jasmine],
+The `angularjs-demo` app comes preconfigured with unit tests. These are written in [Jasmine][jasmine],
 which we run with the [Karma][karma] test runner. We provide a Karma configuration file to run them.
 
 * The configuration is found at `karma.conf.js`.
 * The unit tests are found next to the code they are testing and have an `_test.js` suffix (e.g.
-  `view1_test.js`).
+  `dogs_test.js`).
 
 The easiest way to run the unit tests is to use the supplied npm script:
 
@@ -144,7 +148,7 @@ npm run test-single-run
 <a name="e2e-testing"></a>
 ### Running End-to-End Tests
 
-The `angular-seed` app comes with end-to-end tests, again written in [Jasmine][jasmine]. These tests
+The `angularjs-demo` app comes with end-to-end tests, again written in [Jasmine][jasmine]. These tests
 are run with the [Protractor][protractor] End-to-End test runner. It uses native events and has
 special features for Angular applications.
 
@@ -162,7 +166,7 @@ npm start
 ```
 
 In addition, since Protractor is built upon WebDriver, we need to ensure that it is installed and
-up-to-date. The `angular-seed` project is configured to do this automatically before running the
+up-to-date. The `angularjs-demo` project is configured to do this automatically before running the
 end-to-end tests, so you don't need to worry about it. If you want to manually update the WebDriver,
 you can run:
 
@@ -174,7 +178,7 @@ Once you have ensured that the development web server hosting our application is
 can run the end-to-end tests using the supplied npm script:
 
 ```
-npm run protractor
+npm run e2e
 ```
 
 This script will execute the end-to-end tests against the application being hosted on the
@@ -205,7 +209,7 @@ respectively.
 
 ## Loading Angular Asynchronously
 
-The `angular-seed` project supports loading the framework and application scripts asynchronously.
+The `angularjs-demo` project supports loading the framework and application scripts asynchronously.
 The special `index-async.html` is designed to support this style of loading. For it to work you must
 inject a piece of Angular JavaScript into the HTML page. The project has a predefined script to help
 do this:
@@ -228,12 +232,12 @@ etc to function properly when an HTML page is opened via the `file://` scheme in
 
 ### Running the App during Development
 
-The `angular-seed` project comes preconfigured with a local development web server. It is a Node.js
-tool called [http-server][http-server]. You can start this web server with `npm start`, but you may
+The `angularjs-demo` project comes preconfigured with a local development web server. It is a Node.js
+tool called [superstatic][superstatic]. You can start this web server with `npm start`, but you may
 choose to install the tool globally:
 
 ```
-sudo npm install -g http-server
+sudo npm install -g superstatic
 ```
 
 Then you can start your own development web server to serve static files from a folder by running:
@@ -242,41 +246,26 @@ Then you can start your own development web server to serve static files from a 
 http-server -a localhost -p 8000
 ```
 
-Alternatively, you can choose to configure your own web server, such as Apache or Nginx. Just
-configure your server to serve the files under the `app/` directory.
-
 ### Running the App in Production
+On `production` environment the static files are minified with `grunt` and deployed on `Nginx` server with `Docker`.
 
-This really depends on how complex your app is and the overall infrastructure of your system, but
-the general rule is that all you need in production are the files under the `app/` directory.
-Everything else should be omitted.
-
-Angular apps are really just a bunch of static HTML, CSS and JavaScript files that need to be hosted
-somewhere they can be accessed by browsers.
-
-If your Angular app is talking to the backend server via XHR or other means, you need to figure out
-what is the best way to host the static files to comply with the same origin policy if applicable.
-Usually this is done by hosting the files by the backend server or through reverse-proxying the
-backend server(s) and web server(s).
-
+Run `docker-compose -f docker-compose.prod.yml up --build` to deploy the app in nginx server.
 
 ## Continuous Integration
 
 ### Travis CI
 
 [Travis CI][travis] is a continuous integration service, which can monitor GitHub for new commits to
-your repository and execute scripts such as building the app or running tests. The `angular-seed`
+your repository and execute scripts such as building the app or running tests. The `angularjs-demo`
 project contains a Travis configuration file, `.travis.yml`, which will cause Travis to run your
 tests when you push to GitHub.
 
 You will need to enable the integration between Travis and GitHub. See the
 [Travis website][travis-docs] for instructions on how to do this.
 
-
 ## Contact
 
 For more information on AngularJS please check out [angularjs.org][angularjs].
-
 
 [angularjs]: https://angularjs.org/
 [bower]: http://bower.io/
@@ -293,3 +282,4 @@ For more information on AngularJS please check out [angularjs.org][angularjs].
 [selenium]: http://docs.seleniumhq.org/
 [travis]: https://travis-ci.org/
 [travis-docs]: https://docs.travis-ci.com/user/getting-started
+[superstatic]: https://github.com/firebase/superstatic

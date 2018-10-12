@@ -15,7 +15,8 @@
     "proxying",
     "deploy nginx",
     "superstatic",
-    "html5mode"
+    "html5mode",
+    "grunt"
   ],
   "devDependencies": {
     "bower": "^1.7.7",
