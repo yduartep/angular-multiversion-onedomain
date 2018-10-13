@@ -1,3 +1,5 @@
+![Build Status](https://travis-ci.org/yduartep/angular-multiversion-onedomain.svg?branch=master)
+
 # Angular multi-version single domain
 
 This project use some `micro-frontend` concepts to demonstrates how to deploy multiple angular apps on different `Docker` containers responding under the `same domain`. The apps are developed on different angular versions and the static content are served from different servers depending of the request typed. This is achieved through the use of `Nginx HTTP Proxying`.
@@ -10,6 +12,12 @@ Every new module migrated to angular 6 will replace the old one developed in ang
 In the `angular6_demo` app, there is a Route `guard` that redirect to `angularjs` app those requests not implemented yet, avoiding the router manage the uri internally.
 
 In the `angularjs_demo` app, when you click in a menu belong to a module already migrated to angular 6, the page will be redirected to the angular 6 page.
+
+Both apps use the `html5Mode` to make easier the request redirections.
+Every module migrated from `angularjs` to `angular6` or other framework, should be disabled from the original project to avoid errors during request redirections. For that reason, in the definition of the `angularjs` module, `myApp.cats` is not present anymore.
+
+Every common component like `Header` or `Footer` should be implemented using `Web Components` to be able to share the same components between all the apps that compose the project.
+
 
 ![Demo](https://github.com/yduartep/angular-multiversion-onedomain/blob/master/demo-multi-version.gif)
 
