@@ -5,9 +5,7 @@
   "repository": {
     "url": "https://github.com/yduartep/angular-multiversion-onedomain"
   },
-  "scripts": {
-
-  },
+  "scripts": {},
   "keywords": [
     "angular",
     "angularjs",
