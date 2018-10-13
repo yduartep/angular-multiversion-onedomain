@@ -3,7 +3,7 @@ dist: trusty
 
 language: node_js
 node_js:
-- '7'
+- '8.9.4'
 
 branches:
   only:
@@ -11,7 +11,7 @@ branches:
 
 before_script:
 - npm install -g @angular/cli
-- npm install
+- npm install --silent
 
 install:
   - export DISPLAY=:99.0
@@ -26,16 +26,16 @@ jobs:
   - stage: AngularJs Unit Tests
     env:
       - ANGULARJS_DIR=angularjs-demo
-    script: cd $ANGULARJS_DIR && npm install && npm run test-single-run
+    script: cd $ANGULARJS_DIR && npm install --silent && npm run test-single-run
   - stage: AngularJs E2E Tests
     env:
       - ANGULARJS_DIR=angularjs-demo
-    script: cd $ANGULARJS_DIR && npm install && (npm start > /dev/null &) && (npm run e2e)
+    script: cd $ANGULARJS_DIR && npm install --silent && (npm start > /dev/null &) && (npm run e2e)
   - stage: Angular 6 Unit Tests
     env:
       - ANGULAR6_DIR=angular6-demo
-    script: cd $ANGULAR6_DIR && npm install && npm run test-single-run
+    script: cd $ANGULAR6_DIR && npm install --silent && npm run test-single-run
   - stage: Angular 6 E2E Tests
     env:
       - ANGULAR6_DIR=angular6-demo
-    script: cd $ANGULAR6_DIR && npm install && (npm run e2e)
+    script: cd $ANGULAR6_DIR && npm install --silent && (npm run e2e)
