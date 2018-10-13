@@ -24,9 +24,9 @@ install:
 jobs:
   include:
   - stage: AngularJs Unit Tests
-    script:
-      - cd angularjs-demo
-      - npm run test-single-run
+    env:
+      - ANGULARJS_DIR=angularjs-demo
+    script: cd $ANGULARJS_DIR && npm install && npm run test-single-run
   - stage: AngularJs E2E Tests
     script:
       - (npm start > /dev/null &) && (npm run e2e)
