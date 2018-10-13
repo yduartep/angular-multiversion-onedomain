@@ -27,15 +27,10 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: 'app',
                         src: [
-                            '**', '!**/*.js', '!**/*.css'
+                            '**', '!**/*.js', '!**/*.css', '!bower_components/**'
                         ],
                         dest: 'dist/',
                         filter: 'isFile'
-                    }, {
-                        expand: true,
-                        cwd: 'app',
-                        src: ['lib/**'],
-                        dest: 'dist/'
                     }
                 ],
             },
@@ -49,7 +44,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: 'app',
-                    src: ["**/*.js", "!**/*_test.js", "!lib/**"],
+                    src: ["**/*.js", "!**/*_test.js", "!bower_components/**"],
                     dest: 'dist',
                     rename: function (dest, src) {
                         return renameFile(dest, src, '.js');
@@ -66,7 +61,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: 'app',
-                    src: ['**/*.css', "!lib/**"],
+                    src: ['**/*.css', "!bower_components/**"],
                     dest: 'dist',
                     rename: function (dest, src) {
                         return renameFile(dest, src, '.css');

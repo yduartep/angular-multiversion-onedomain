@@ -4,7 +4,7 @@ This project is a typical [AngularJS][angularjs] demo web app used to demostrate
 
 The app contain a menu with 3 requests: `Dogs` and `Help` are served through `UI-Router`. The `Cats` request instead, is served from other server.
 So, everytime you click in that menu on dev environment, the application will redirect to the default page `Dogs`.
-In a production environment, the application is deployed in an `Nginx` server and everytime you click the `Cats` menu, the app will redirect to the other server.
+In a production environment, the application is deployed in an `Nginx` server and everytime you click the `Cats` menu, the app will redirect to the other server (angular6_demo server).
 
 The app use the `html5Mode` to make easier the requests redirection.
 On `dev` environment the application is started with the `superstatic` file server to allow the refresh of every request and avoid the common 404 error.
@@ -19,10 +19,8 @@ To get you started you can simply clone the main repository and install the depe
 ### Prerequisites
 
 - You need git to clone the repository. You can get git from [here][git].
-
 - I also use a number of Node.js tools to initialize and test the project. You must have Node.js
 and its package manager (npm) installed. You can get them from [here][node].
-
 - You also will need Docker to start the application.
 
 ### Clone `angular-multiversion-onedomain`
@@ -46,21 +44,24 @@ us manage and test the application.
   [end-to-end testing](#e2e-testing) for more info.
 
 
-The project use `bower` to download the angular dependencies but I have renamed the folder to lib and use bower just when I need to update the dependencies.
-
+The project use `bower` to download the angular dependencies and is configured to download it automatically before to start the app.
 To install the project execute the command:
 
 ```
 npm install
 ```
 
-To add and update dependencies, modify the file `bower.json` and execute the command:
+To add or change dependencies manually, modify the file `bower.json` and execute the command:
 
 ```
 npm run bower-install
 ```
 
-Then, rename the folder generated `app/bower_components` to `lib`.
+To update dependencies, execute the command:
+
+```
+npm run bower-update
+```
 
 ### Development server
 
@@ -243,13 +244,23 @@ sudo npm install -g superstatic
 Then you can start your own development web server to serve static files from a folder by running:
 
 ```
-http-server -a localhost -p 8000
+superstatic -c superstatic.json --port 8000 --host 0.0.0.0
 ```
+
+If you want to start the application with `Docker`, execute the command:
+
+```
+docker-compose up --build
+```
+
+Now browse to the app at [`localhost:8000`][local-app-url].
 
 ### Running the App in Production
 On `production` environment the static files are minified with `grunt` and deployed on `Nginx` server with `Docker`.
 
 Run `docker-compose -f docker-compose.prod.yml up --build` to deploy the app in nginx server.
+
+Now browse to the app at [`localhost:81`][prod-app-url].
 
 ## Continuous Integration
 
@@ -276,6 +287,7 @@ For more information on AngularJS please check out [angularjs.org][angularjs].
 [jdk-download]: http://www.oracle.com/technetwork/java/javase/downloads
 [karma]: https://karma-runner.github.io/
 [local-app-url]: http://localhost:8000/index.html
+[prod-app-url]: http://localhost:81
 [node]: https://nodejs.org/
 [npm]: https://www.npmjs.org/
 [protractor]: http://www.protractortest.org/

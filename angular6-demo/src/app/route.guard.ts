@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot} from '@angular/router';
+import {environment} from '../environments/environment';
 
 @Injectable()
 export class RouteGuard implements CanActivate {
@@ -23,7 +24,12 @@ export class RouteGuard implements CanActivate {
             location.href = newUrl;
         }
         if (route === '/help') {
-            const newUrl = `${window.location.origin}/${route}`;
+            let newUrl = '';
+            if (!environment.production) {
+                newUrl = `${window.location.hostname}:8000${route}`;
+            } else {
+                newUrl = `${window.location.origin}${route}`;
+            }
             location.href = newUrl;
         }
     }

@@ -11,6 +11,6 @@
     "angular-loader": "~1.6.0",
     "angular-mocks": "~1.6.0",
     "angular-ui-router": "0.3.2",
-    "html5-boilerplate": "^5.3.0"
+    "html5-boilerplate": "^6.1.0"
   }
 }

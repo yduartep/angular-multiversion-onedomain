@@ -5,7 +5,7 @@ FROM node:8.9.4
 RUN mkdir -p /usr/src/app/v1
 
 # Install dependencies just if the file package.json is changed
-COPY package.json /usr/src/app/v1/
+COPY package.json bower.json .bowerrc superstatic.json /usr/src/app/v1/
 
 # Change directory so that our commands run inside this new directory
 WORKDIR /usr/src/app/v1

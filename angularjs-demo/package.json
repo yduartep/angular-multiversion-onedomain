@@ -39,9 +39,10 @@
     "superstatic": "^6.0.3"
   },
   "scripts": {
-    "bower-install": "bower install",
+    "bower-install": "bower install --allow-root",
     "bower-update": "bower update",
     "update-deps": "npm update",
+    "prestart": "npm run bower-install",
     "start": "superstatic -c superstatic.json --port 8000 --host 0.0.0.0",
     "pretest": "npm install",
     "test": "karma start karma.conf.js",

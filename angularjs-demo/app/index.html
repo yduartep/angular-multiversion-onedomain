@@ -15,10 +15,10 @@
     <title>AngularJs Demo Dogs & Cats</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css">
-    <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
     <link rel="stylesheet" href="app.css">
-    <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-3.6.0.min.js"></script>
 
     <style>
         .footer {
@@ -45,13 +45,19 @@
         h1.main {
             padding-left: 10px;
         }
+
+        .copyright {
+            float: right;
+            padding-right: 5px;
+        }
     </style>
 </head>
 <body>
 <h1 class="main">Angular Demo Dogs & Cats</h1>
 <ul class="menu">
     <li><a ui-sref="dogs">Dogs</a></li>
-    <li><a href="javascript:void(0)" onclick="window.location.href = window.location.origin + '/cats'; return;">Cats</a></li>
+    <li><a href="javascript:void(0)" onclick="window.location.href = window.location.origin + '/cats'; return;">Cats</a>
+    </li>
     <li><a ui-sref="help">Help</a></li>
 </ul>
 <div class="version">
@@ -65,14 +71,17 @@
 
 <!--<div class="content" ng-view></div>-->
 <div class="content" ui-view></div>
-<div class="footer">Angular demo: v<span app-version></span></div>
+<div class="footer">
+    Angular demo: <strong>v<span app-version></span></strong>
+    <span class="copyright">Copyright © 2018 <a href="mailto:layahi@gmail.com">Yahima Duarte</a> | All Rights Reserved</span>
+</div>
 
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
 -->
-<script src="lib/angular/angular.js"></script>
-<script src="lib/angular-route/angular-route.js"></script>
-<script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 <script src="app.js"></script>
 <script src="dogs/dogs.js"></script>
 <script src="dogs/dogs.service.js"></script>
