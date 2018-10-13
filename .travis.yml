@@ -28,12 +28,14 @@ jobs:
       - ANGULARJS_DIR=angularjs-demo
     script: cd $ANGULARJS_DIR && npm install && npm run test-single-run
   - stage: AngularJs E2E Tests
-    script:
-      - (npm start > /dev/null &) && (npm run e2e)
+    env:
+      - ANGULARJS_DIR=angularjs-demo
+    script: cd $ANGULARJS_DIR && npm install && (npm start > /dev/null &) && (npm run e2e)
   - stage: Angular 6 Unit Tests
-    script:
-      - cd ../angular6-demo
-      - npm run test-single-run
+    env:
+      - ANGULAR6_DIR=angular6-demo
+    script: cd $ANGULAR6_DIR && npm install && npm run test-single-run
   - stage: Angular 6 E2E Tests
-    script:
-      - (npm start > /dev/null &) && (npm run e2e)
+    env:
+      - ANGULAR6_DIR=angular6-demo
+    script: cd $ANGULAR6_DIR && npm install && (npm run e2e)
