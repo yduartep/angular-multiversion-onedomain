@@ -1,7 +1,6 @@
 # Angular multi-version single domain
 
-This project demonstrates how to deploy multiple angular apps on different `Docker` containers using the same domain.
-The apps are developed on different angular versions and every uri you type, will redirect to the specific server through `Nginx HTTP Proxying`.
+This project use some `micro-frontend` concepts to demonstrates how to deploy multiple angular apps on different `Docker` containers responding under the `same domain`. The apps are developed on different angular versions and the static content are served from different servers depending of the request typed. This is achieved through the use of `Nginx HTTP Proxying`.
 
 The project is composed of two apps: `angularjs_demo` developed in angular version 1.6 and `angular6_demo` developed on angular version 6.
 
