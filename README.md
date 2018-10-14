@@ -12,7 +12,7 @@ Every new module migrated to `angular` >= 2 will replace the old one developed i
 ## Redirections
 In development environment, the apps are served in different ports, so, the redirections for every request should be implemented manually. What I have done is to configure 2 environment vars: `hostByRequest` to set the host where should be redirected the typed request and `routesToRedirect` that specifies which requests will be redirected. The rest of the requests will be managed by the application route internally. This check is executed on every route change. In `angular6_demo` app, there is a `route guard` that implements this. In `angularjs_demo` app this check is executed listening the event $stateChangeStart.
 
-In production environment, 3 `Nginx` servers are started. The first one, acts as a proxy server and redirect every request to a different client server depending of the request typed. In the another 2 `Nginx` servers are deployed the `angularjs` app and the `angular 6` app respectively. See the configuration below:
+In production environment, 3 `Nginx` servers are started. The first one, acts as a proxy server and redirect every request to a different client server depending of the request typed. In the another 2 `Nginx` servers, the `angularjs` and `angular 6` app are deployed respectively. See the configuration below:
 
 ```
 nginx.conf
@@ -53,6 +53,8 @@ http {
     }
 }
 ```
+
+Note: Every module you migrate from `angularjs` should be removed from the module definition because when you start the application on production environment the routes are managed by the nginx server non by the internal application route and the server will try to load the new module from angularjs but the angular6 static content will be served and you will have a loading error. 
 
 ## Common Components
 Every common component like `Header` or `Footer` should be implemented using `Web Components` to be able to share the same components between all the apps that compose the project.
