@@ -140,7 +140,7 @@ To avoid this behaviour, It's necessary to remove the **Cats** module from the a
 ```
 
 ## Demo image
-![Demo](https://github.com/yduartep/angular-multiversion-onedomain/blob/master/demo-multi-version.gif)
+![Demo](https://github.com/yduartep/angular-multiversion-onedomain/blob/master/docs/demo-multi-version.gif)
 
 # Getting Started
 
