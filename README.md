@@ -9,6 +9,7 @@ The project is composed of two apps: `angularjs_demo` developed in angular versi
 This project is usefull in the case you want to convert monolithic AngularJS apps to modules progressively without to stop the current development of new features or bug fixing.
 Every new module migrated to `angular` >= 2 will replace the old one developed in `angularjs`. This solution could be applied with any other framework. You could have a module migrated to `angular` >=2, another module migrated to `reactjs` and other on `vue` and have the same result.
 
+## Redirections
 In development environment, the apps are served in different ports, so, the redirections for every request should be implemented manually. What I have done is to configure 2 environment vars: `hostByRequest` to set the host where should be redirected the typed request and `routesToRedirect` that specifies which requests will be redirected. The rest of the requests will be managed by the application route internally. This check is executed on every route change. In `angular6_demo` app, there is a `route guard` that implements this. In `angularjs_demo` app this check is executed listening the event $stateChangeStart.
 
 In production environment, 3 `Nginx` servers are started. The first one, acts as a proxy server and redirect every request to a different client server depending of the request typed. In the another 2 `Nginx` servers are deployed the `angularjs` app and the `angular 6` app respectively. See the configuration below:
@@ -53,6 +54,7 @@ http {
 }
 ```
 
+## Common Components
 Every common component like `Header` or `Footer` should be implemented using `Web Components` to be able to share the same components between all the apps that compose the project.
 
 
