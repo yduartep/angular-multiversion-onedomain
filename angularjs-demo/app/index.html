@@ -56,8 +56,7 @@
 <h1 class="main">Angular Demo Dogs & Cats</h1>
 <ul class="menu">
     <li><a ui-sref="dogs">Dogs</a></li>
-    <li><a href="javascript:void(0)" onclick="window.location.href = window.location.origin + '/cats'; return;">Cats</a>
-    </li>
+    <li><a href="/cats">Cats</a></li>
     <li><a ui-sref="help">Help</a></li>
 </ul>
 <div class="version">
@@ -73,7 +72,9 @@
 <div class="content" ui-view></div>
 <div class="footer">
     Angular demo: <strong>v<span app-version></span></strong>
-    <span class="copyright">Copyright © 2018 <a href="mailto:layahi@gmail.com">Yahima Duarte</a> | All Rights Reserved</span>
+    <span class="copyright">Copyright © 2018
+        <a href="mailto:layahi@gmail.com">Yahima Duarte</a> | All Rights Reserved
+    </span>
 </div>
 
 <!-- In production use:
@@ -82,6 +83,7 @@
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="bower_components/angular-environment/dist/angular-environment.min.js"></script>
 <script src="app.js"></script>
 <script src="dogs/dogs.js"></script>
 <script src="dogs/dogs.service.js"></script>

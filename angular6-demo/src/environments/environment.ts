@@ -4,9 +4,15 @@
 import * as packageData from '../../package.json';
 
 export const environment = {
-  production: false,
-  appVersion: packageData['version'],
-  angularVersion: packageData['dependencies']['@angular/core']
+    production: false,
+    appVersion: packageData['version'],
+    angularVersion: packageData['dependencies']['@angular/core'],
+    hostByRequest: {
+        dogs: 'http://localhost:8000',
+        cats: 'http://localhost:4200',
+        help: 'http://localhost:8000'
+    },
+    routesToRedirect: ['/dogs', '/help']
 };
 
 /*

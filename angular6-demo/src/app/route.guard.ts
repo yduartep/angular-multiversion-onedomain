@@ -19,18 +19,11 @@ export class RouteGuard implements CanActivate {
      * @param route the current route path
      */
     private redirectToOldUrl(route) {
-        if (route === '/dogs') {
-            const newUrl = `${window.location.origin}`;
-            location.href = newUrl;
-        }
-        if (route === '/help') {
-            let newUrl = '';
-            if (!environment.production) {
-                newUrl = `${window.location.hostname}:8000${route}`;
-            } else {
-                newUrl = `${window.location.origin}${route}`;
-            }
-            location.href = newUrl;
+        const hostByRequest = (environment.hostByRequest || {})[route.substring(1)];
+        const routesToRedirect = environment.routesToRedirect || [];
+
+        if (routesToRedirect.includes(route)) {
+            location = hostByRequest + route;
         }
     }
 }

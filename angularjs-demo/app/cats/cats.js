@@ -1,13 +1,6 @@
 'use strict';
 
-angular.module('myApp.cats', ['ngRoute'])
-
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/cats', {
-    templateUrl: 'cats/cats.html',
-    controller: 'CatsCtrl'
-  });
-}])
+angular.module('myApp.cats', [])
 
 .controller('CatsCtrl', function($scope, CatsService) {
     var self = this;
