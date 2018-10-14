@@ -100,7 +100,7 @@ Then, I develop a new app in angular6 to implement the *cats* module and what I 
 
 To manage this on dev environment I will create a manual redirection system to redirect every request when the route changes. On prod environment, I will configure a proxy server to serve the static content of every request from a different server. 
 
-If my angular module and index.html file stays invariant, on prod environment I will have a problem. During the angularjs loading phase the application will try to load the **myApp.cats** module, this automatically will try to load the files **cats.js** and **cats.service.js** but from the `angular6` server as defined on the proxy server and you will have the following error:
+If my angular module and index.html file stays invariant, on prod environment I will have a problem. During the angularjs loading phase the application will try to load **myApp.cats** module. This module will try to load the files **cats.js** and **cats.service.js** but from the `angular6` server (as defined on the proxy server) and you will have the following error:
 
 ![Loading Error](https://github.com/yduartep/angular-multiversion-onedomain/blob/master/docs/Loading_Error.png)
 
