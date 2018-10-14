@@ -6,16 +6,55 @@ This project use some `micro-frontend` concepts to demonstrates how to deploy mu
 
 The project is composed of two apps: `angularjs_demo` developed in angular version 1.6 and `angular6_demo` developed on angular version 6.
 
-This project is usefull in the case you want to convert monolithic AngularJS apps to modules progressively without to stop the current development of new functionality or bug fixing.
-Every new module migrated to angular 6 will replace the old one developed in angularjs.
+This project is usefull in the case you want to convert monolithic AngularJS apps to modules progressively without to stop the current development of new features or bug fixing.
+Every new module migrated to `angular` >= 2 will replace the old one developed in `angularjs`. This solution could be applied with any other framework. You could have a module migrated to `angular` >=2, another module migrated to `reactjs` and other on `vue` and have the same result.
 
-In the `angular6_demo` app, there is a Route `guard` that redirect to `angularjs` app those requests not implemented yet, avoiding the router manage the uri internally.
+## Redirections
+In development environment, the apps are served in different ports, so, the redirections for every request should be implemented manually. What I have done is to configure 2 environment vars: `hostByRequest` to set the host where should be redirected the typed request and `routesToRedirect` that specifies which requests will be redirected. The rest of the requests will be managed by the application route internally. This check is executed on every route change. In `angular6_demo` app, there is a `route guard` that implements this. In `angularjs_demo` app this check is executed listening the event $stateChangeStart.
 
-In the `angularjs_demo` app, when you click in a menu belong to a module already migrated to angular 6, the page will be redirected to the angular 6 page.
+In production environment, 3 `Nginx` servers are started. The first one, acts as a proxy server and redirect every request to a different client server depending of the request typed. In the another 2 `Nginx` servers are deployed the `angularjs` app and the `angular 6` app respectively. See the configuration below:
 
-Both apps use the `html5Mode` to make easier the request redirections.
-Every module migrated from `angularjs` to `angular6` or other framework, should be disabled from the original project to avoid errors during request redirections. For that reason, in the definition of the `angularjs` module, `myApp.cats` is not present anymore.
+```
+nginx.conf
 
+worker_processes 4;
+events { worker_connections 1024; }
+http {
+    sendfile on;
+
+    upstream angular6-nginx {
+        server angular6_app:80;
+    }
+    upstream angularjs-nginx {
+        server angularjs_app:80;
+    }
+
+    server {
+        listen       80;
+        server_name  localhost;
+
+        location / {
+            proxy_pass         http://angularjs-nginx/;
+            proxy_redirect     off;
+            proxy_set_header   Host $host;
+            proxy_set_header   X-Real-IP $remote_addr;
+            proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header   X-Forwarded-Host $server_name;
+        }
+
+        location /cats/ {
+            proxy_pass          http://angular6-nginx/;
+            proxy_redirect      off;
+            proxy_set_header    Host $host;
+            proxy_set_header    X-Real-IP $remote_addr;
+            proxy_set_header    X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header    X-Forwarded-Host $server_name;
+        }
+    }
+}
+```
+
+## Common Components
 Every common component like `Header` or `Footer` should be implemented using `Web Components` to be able to share the same components between all the apps that compose the project.
 
 
