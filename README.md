@@ -104,7 +104,7 @@ If my angular module and index.html file stays invariant, on prod environment I 
 
 ![Loading Error](https://github.com/yduartep/angular-multiversion-onedomain/blob/master/docs/Loading_Error.png)
 
-If you open the source in the Chrome Inspector you will see that the index.html file is loaded from the `angular6` server but  the rest of the static content served comes from the `angularjs` server.
+If you open the source tab in the Chrome Inspector you will see that the index.html file is loaded from the `angular6` server but  the rest of the static content served comes from the `angularjs` server.
 
 ![Source Inspector](https://github.com/yduartep/angular-multiversion-onedomain/blob/master/docs/Loading_Error_Source.png)
 
