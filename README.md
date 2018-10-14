@@ -92,7 +92,7 @@ When I start the app, the index.html file will be loaded and all the necessary j
 <script src="components/version/interpolate-filter.js"></script>
 ```
 
-Every navigation will be managed directly by the **ui-router** (in dev and prod environment).
+All the navigation will be managed by **ui-router** (in dev and prod environment).
 
 Then, I develop a new app in angular6 to implement the *cats* module and what I would like to achieve is:
 - If I go to /dogs and /help I want to load the static content from the angularjs server.
