@@ -1,0 +1,7 @@
+version: '3'
+services:
+  angular8_demo:
+    build: .
+    ports:
+      - 4200:4200
+    container_name: angular8_demo

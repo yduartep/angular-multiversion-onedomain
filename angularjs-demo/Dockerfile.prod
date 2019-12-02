@@ -1,7 +1,9 @@
 ############## Stage 1 - "build-stage-angularjs", based on Node.js, to build and compile the angularjs project ##############
 
 # Create image based on the official Node image from dockerhub
-FROM node:8.9.4 as build-stage-angularjs
+FROM node:12 as build-stage-angularjs
+
+RUN rm -rf /usr/src/app
 
 # Create a directory where our app will be placed
 RUN mkdir -p /usr/src/app/v1
@@ -13,7 +15,7 @@ COPY package.json bower.json .bowerrc Gruntfile.js /usr/src/app/v1/
 WORKDIR /usr/src/app/v1
 
 # Install dependecies
-RUN npm i npm@latest -g
+RUN npm i npm@6.12.1 -g
 RUN npm install -g grunt-cli
 RUN npm install --silent
 RUN npm run bower-install
@@ -29,7 +31,7 @@ RUN grunt
 FROM nginx:1.15
 
 COPY --from=build-stage-angularjs /usr/src/app/v1/dist /usr/share/nginx/html
+COPY --from=build-stage-angularjs /usr/src/app/v1/app/footer-demo-element.js /usr/src/app/v1/app/header-demo-element.js /usr/share/nginx/html/
 COPY --from=build-stage-angularjs /usr/src/app/v1/nginx.conf /etc/nginx/nginx.conf
-COPY --from=build-stage-angularjs /usr/src/app/v1/app/bower_components /usr/share/nginx/html/bower_components
 
 EXPOSE 81

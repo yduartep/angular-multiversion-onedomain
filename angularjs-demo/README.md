@@ -4,13 +4,13 @@ This project is a typical [AngularJS][angularjs] demo web app used to demostrate
 
 The app contain a menu with 3 requests: `Dogs` and `Help` are served through `UI-Router`. The `Cats` request instead, is served from other server.
 So, everytime you click in that menu on dev environment, the application will redirect to the default page `Dogs`.
-In a production environment, the application is deployed in an `Nginx` server and everytime you click the `Cats` menu, the app will redirect to the other server (angular6_demo server).
+In a production environment, the application is deployed in an `Nginx` server and everytime you click the `Cats` menu, the app will redirect to the other server (angular8_demo server).
 
 The app use the `html5Mode` to make easier the requests redirection.
 On `dev` environment the application is started with the `superstatic` file server to allow the refresh of every request and avoid the common 404 error.
 On `production` environment the static files are minified with `grunt` and deployed on `Nginx` server with `Docker`.
 
-Every module migrated to `angular6` or other framework, should be disabled from this project to avoid errors during request redirections. For that reason, in the definition of the `angularjs` module, `myApp.cats` is not present anymore.
+Every module migrated to `angular8` or other framework, should be disabled from this project to avoid errors during request redirections. For that reason, in the definition of the `angularjs` module, `myApp.cats` is not present anymore.
 
 ## Getting Started
 

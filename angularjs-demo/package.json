@@ -1,7 +1,7 @@
 {
   "name": "angularjs-demo",
   "private": true,
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "AngularJs Demo Dogs & Cats",
   "repository": "https://github.com/yduartep/angular-multiversion-onedomain/tree/master/angularjs-demo",
   "license": "MIT",
@@ -20,6 +20,7 @@
   ],
   "devDependencies": {
     "bower": "^1.7.7",
+    "copyfiles": "^2.1.1",
     "grunt": "^1.0.3",
     "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-copy": "^1.0.0",
@@ -43,8 +44,12 @@
     "bower-update": "bower update",
     "update-deps": "npm update",
     "postinstall": "npm run bower-install",
-    "prestart": "npm run bower-install",
+
+    "prestart": "npm run bower-install && copyfiles -f ../angular-common-elements/dist/es2015/**.js ./app",
     "start": "superstatic -c superstatic.json --port 8000 --host 0.0.0.0",
+    "prestart:prod": "grunt",
+    "start:prod": "superstatic -c superstatic.prod.json --port 8000 --host 0.0.0.0",
+
     "pretest": "npm install",
     "test": "karma start karma.conf.js",
     "test-single-run": "karma start karma.conf.js --single-run",

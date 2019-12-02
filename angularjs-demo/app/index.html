@@ -53,29 +53,14 @@
     </style>
 </head>
 <body>
-<h1 class="main">Angular Demo Dogs & Cats</h1>
-<ul class="menu">
-    <li><a ui-sref="dogs">Dogs</a></li>
-    <li><a href="/cats">Cats</a></li>
-    <li><a ui-sref="help">Help</a></li>
-</ul>
-<div class="version">
-    <p>App version: <strong>{{ '%VERSION%' | interpolate }}</strong></p>
-    <p>Angular version: <strong style="color:red">1.5.11</strong></p>
-</div>
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<!--<div class="content" ng-view></div>-->
+<ng-header-demo app-version="2.0.0" angular-version="1.6.10" color="red"></ng-header-demo>
 <div class="content" ui-view></div>
-<div class="footer">
-    Angular demo: <strong>v<span app-version></span></strong>
-    <span class="copyright">Copyright © 2018
-        <a href="mailto:layahi@gmail.com">Yahima Duarte</a> | All Rights Reserved
-    </span>
-</div>
+<ng-footer-demo app-version="2.0.0"></ng-footer-demo>
 
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
@@ -93,5 +78,8 @@
 <script src="components/version/version.js"></script>
 <script src="components/version/version-directive.js"></script>
 <script src="components/version/interpolate-filter.js"></script>
+
+<script src="./header-demo-element.js"></script>
+<script src="./footer-demo-element.js"></script>
 </body>
 </html>
