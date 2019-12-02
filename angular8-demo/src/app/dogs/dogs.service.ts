@@ -15,8 +15,8 @@ export class DogsService {
     return this.http.get('https://dog.ceo/api/breeds/list/all')
       .pipe(
         map(data => {
-          if (data.status === 'success') {
-            const values = Object.keys(data.message);
+          if (data['status'] === 'success') {
+            const values = Object.keys(data['message']);
 
             return values.map((name, i) => {
               return {id: i + 1, name};
@@ -31,8 +31,8 @@ export class DogsService {
   fetchByCategory(breed: string): Observable<string> {
     return this.http.get(`https://dog.ceo/api/breed/${breed}/images/random`).pipe(
       map(data => {
-        if (data.status === 'success') {
-          return data.message;
+        if (data['status'] === 'success') {
+          return data['message'];
         } else {
           return null;
         }
