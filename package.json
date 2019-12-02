@@ -1,6 +1,6 @@
 {
   "name": "angular-multiversion-onedomain",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "This project use some micro-frontend concepts to demonstrates how to deploy multiple angular apps on different Docker containers responding under the same domain. The apps are developed on different angular versions and the static content are served from different servers depending of the request typed making use of Nginx HTTP Proxying.",
   "repository": {
     "url": "https://github.com/yduartep/angular-multiversion-onedomain"
