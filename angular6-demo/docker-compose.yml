@@ -1,7 +1,0 @@
-version: '3'
-services:
-  angular6_demo:
-    build: .
-    ports:
-      - 4200:4200
-    container_name: angular6_demo
