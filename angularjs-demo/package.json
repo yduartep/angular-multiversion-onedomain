@@ -1,7 +1,7 @@
 {
   "name": "angularjs-demo",
   "private": true,
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "AngularJs Demo Dogs & Cats",
   "repository": "https://github.com/yduartep/angular-multiversion-onedomain/tree/master/angularjs-demo",
   "license": "MIT",
