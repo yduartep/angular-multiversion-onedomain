@@ -1,6 +1,6 @@
 ![Build Status](https://travis-ci.org/yduartep/angular-multiversion-onedomain.svg?branch=master)
 
-# Angular multi-version single domain
+# Building Micro Frontend with vertical architecture and Nginx reverse proxy to route the appropriate app
 
 This project use some `micro-frontend` concepts to demonstrates how to deploy multiple angular apps on different `Docker` containers responding under the `same domain`. The apps are developed on different angular versions and the static content are served from different servers depending of the request typed. This is achieved through the use of `Nginx HTTP Proxying`.
 
