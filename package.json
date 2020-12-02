@@ -24,5 +24,6 @@
     "micro-frontend"
   ],
   "author": "Yahima Duarte <layahi@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "private": false
 }
