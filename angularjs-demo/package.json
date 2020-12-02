@@ -43,13 +43,11 @@
     "bower-install": "bower install --allow-root",
     "bower-update": "bower update",
     "update-deps": "npm update",
-    "postinstall": "npm run bower-install",
-
+    "postinstall": "npm run bower-install && copyfiles -f ../angular-common-elements/dist/es2015/**.js ./app",
     "prestart": "npm run bower-install && copyfiles -f ../angular-common-elements/dist/es2015/**.js ./app",
     "start": "superstatic -c superstatic.json --port 8000 --host 0.0.0.0",
     "prestart:prod": "grunt",
     "start:prod": "superstatic -c superstatic.prod.json --port 8000 --host 0.0.0.0",
-
     "pretest": "npm install",
     "test": "karma start karma.conf.js",
     "test-single-run": "karma start karma.conf.js --single-run",

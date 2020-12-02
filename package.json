@@ -5,7 +5,12 @@
   "repository": {
     "url": "https://github.com/yduartep/angular-multiversion-onedomain"
   },
-  "scripts": {},
+  "scripts": {
+    "install:elements": "cd ./angular-common-elements && npm i",
+    "install:angular8": "cd ./angular8-demo && npm i",
+    "install:angularjs": "cd ./angularjs-demo && npm i",
+    "install": "npm run install:elements && npm run install:angular8 && npm run install:angularjs"
+  },
   "keywords": [
     "angular",
     "angular8",

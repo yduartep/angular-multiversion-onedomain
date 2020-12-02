@@ -2,5 +2,6 @@
  * Public API Surface of footer-demo-lib
  */
 
-export * from './lib/footer-demo.component';
-export * from './lib/footer-demo.module';
+export * from './lib/footer-demo-lib.service';
+export * from './lib/footer-demo-lib.component';
+export * from './lib/footer-demo-lib.module';

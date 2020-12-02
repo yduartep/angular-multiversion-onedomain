@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeaderDemoLibComponent } from './header-demo.component';
+import { HeaderDemoLibComponent } from './header-demo-lib.component';
 
 describe('HeaderDemoLibComponent', () => {
   let component: HeaderDemoLibComponent;

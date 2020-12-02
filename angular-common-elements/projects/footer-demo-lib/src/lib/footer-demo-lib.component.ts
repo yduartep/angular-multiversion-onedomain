@@ -28,9 +28,9 @@ import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
       }
     `
   ],
-  encapsulation: ViewEncapsulation.Native
+  encapsulation: ViewEncapsulation.ShadowDom
 })
-export class FooterDemoComponent implements OnInit {
+export class FooterDemoLibComponent implements OnInit {
   @Input() appVersion: string;
   year = new Date().getFullYear();
 

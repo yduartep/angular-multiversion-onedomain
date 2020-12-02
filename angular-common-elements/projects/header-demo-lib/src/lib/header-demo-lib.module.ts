@@ -1,17 +1,17 @@
 import {Injector, NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
-import {HeaderDemoComponent} from './header-demo.component';
 import {createCustomElement} from '@angular/elements';
+import {HeaderDemoLibComponent} from './header-demo-lib.component';
 
 @NgModule({
-  declarations: [HeaderDemoComponent],
+  declarations: [HeaderDemoLibComponent],
   imports: [BrowserModule, FormsModule],
-  entryComponents: [HeaderDemoComponent]
+  entryComponents: [HeaderDemoLibComponent]
 })
-export class HeaderDemoModule {
+export class HeaderDemoLibModule {
   constructor(private injector: Injector) {
-    const elHeader = createCustomElement(HeaderDemoComponent, {injector: this.injector});
+    const elHeader = createCustomElement(HeaderDemoLibComponent, {injector: this.injector});
     customElements.define('ng-header-demo', elHeader);
   }
 }

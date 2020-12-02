@@ -4,6 +4,7 @@
   "repository": "https://github.com/yduartep/angular-multiversion-onedomain/tree/master/angular8-demo",
   "scripts": {
     "ng": "ng",
+    "postinstall": "copyfiles -f ../angular-common-elements/dist/es2015/**.js ./src",
     "prestart": "copyfiles -f ../angular-common-elements/dist/es2015/**.js ./src",
     "start": "ng serve --host 0.0.0.0",
     "build": "ng build",

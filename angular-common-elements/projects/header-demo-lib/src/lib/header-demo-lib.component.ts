@@ -56,9 +56,9 @@ import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
       }
     `
   ],
-  encapsulation: ViewEncapsulation.Native
+  encapsulation: ViewEncapsulation.ShadowDom
 })
-export class HeaderDemoComponent implements OnInit {
+export class HeaderDemoLibComponent implements OnInit {
   @Input() appVersion: string;
   @Input() angularVersion: string;
   @Input() color: string;

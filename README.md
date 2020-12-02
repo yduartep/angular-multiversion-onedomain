@@ -151,6 +151,8 @@ First of all download the source code. Clone the Github repository executing the
 
 `git clone https://github.com/yduartep/angular-multiversion-onedomain.git`
 
+Then run the command `npm i` from the root of the project
+
 ## Development server
 
 Run `docker-compose up --build` to start the dev server of both apps.

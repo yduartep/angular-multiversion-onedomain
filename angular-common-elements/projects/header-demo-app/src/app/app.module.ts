@@ -1,16 +1,12 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
-
-import {AppComponent} from './app.component';
-import {HeaderDemoModule} from '../../../header-demo-lib/src/lib/header-demo.module';
+import {HeaderDemoLibModule} from '../../../header-demo-lib/src/lib/header-demo-lib.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [],
   imports: [
     BrowserModule,
-    HeaderDemoModule
+    HeaderDemoLibModule
   ],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

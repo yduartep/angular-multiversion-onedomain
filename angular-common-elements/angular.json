@@ -5,11 +5,7 @@
   "projects": {
     "angular-common-elements": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -28,11 +24,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": [
-              "src/footer-demo-element.js",
-              "src/header-demo-element.js",
+              {
+                "input": "node_modules/document-register-element/build/document-register-element.js"
+              },
               {
                 "input": "node_modules/document-register-element/build/document-register-element.js"
               }
@@ -99,7 +96,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": []
           }
