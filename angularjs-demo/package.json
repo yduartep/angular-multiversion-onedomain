@@ -19,7 +19,7 @@
     "grunt"
   ],
   "devDependencies": {
-    "bower": "^1.7.7",
+    "bower": "^1.8.8",
     "copyfiles": "^2.1.1",
     "grunt": "^1.0.3",
     "grunt-contrib-clean": "^1.1.0",
